@@ -1,0 +1,14 @@
+{
+    "openFiles": [
+        "burger_data.dzn",
+        "Bonger.mzn"
+    ],
+    "openTab": 1,
+    "projectFiles": [
+        "Bonger.mzn",
+        "burger_data.dzn"
+    ],
+    "selectedBuiltinConfigId": "org.gecode.gecode",
+    "selectedBuiltinConfigVersion": "6.3.0",
+    "version": 106
+}
