@@ -1,0 +1,18 @@
+{
+    "openFiles": [
+        "Task1.mzn",
+        "Data/data_1.dzn",
+        "Data/data_2.dzn",
+        "Data/data_3.dzn"
+    ],
+    "openTab": 3,
+    "projectFiles": [
+        "Data/data_1.dzn",
+        "Data/data_2.dzn",
+        "Data/data_3.dzn",
+        "Task1.mzn"
+    ],
+    "selectedBuiltinConfigId": "org.gecode.gecode",
+    "selectedBuiltinConfigVersion": "6.3.0",
+    "version": 106
+}
