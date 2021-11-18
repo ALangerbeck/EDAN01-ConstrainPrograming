@@ -13,11 +13,10 @@ array[0..n_edges] of var int:cost;
 %Decision Variables
 
 %array of arcs in graph
-array[1..n_edges,1..2] of int: arcs = array2d(1..n_edges, 1..2,[
-  if j==1 then from[i]
+array[1..n_edges,1..2] of var int: arcs = array2d(1..n_edges, 1..2,[
+  if j == 1 then from[i]
   else to[i] endif
-  |i in 1..n_edges,j in 1..2
-  ]);
+  |i in 1..n_edges,j in 1..2]);
 
 %array of flow balance for each node
 array[1..graph_size] of int: balances = [
@@ -27,10 +26,9 @@ array[1..graph_size] of int: balances = [
   |i in 1..graph_size];
   
 %array of flows, domain variables for each arc
-array [1..graph_size] of var -n_dests..n_dests: flows;
+array [1..n_edges] of var -n_dests..n_dests: flows;
 
-constraint 
-  network_flow(arcs, balances, flows);
+constraint network_flow(arcs, balances, flows);
   
 var int: totalCost = sum([cost[i] | i in 1..n_edges where flows[i] != 0]);
 
