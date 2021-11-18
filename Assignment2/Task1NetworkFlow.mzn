@@ -4,11 +4,11 @@ include "globals.mzn";
 int: graph_size;
 int: start;
 int: n_dests;
-array[0..n_dests] of var int: dest;
+array[1..n_dests] of var int: dest;
 int: n_edges;
-array[0..n_edges] of var int:from;
-array[0..n_edges] of var int:to;
-array[0..n_edges] of var int:cost;
+array[1..n_edges] of var int:from;
+array[1..n_edges] of var int:to;
+array[1..n_edges] of var int:cost;
 
 %Decision Variables
 
@@ -19,14 +19,14 @@ array[1..n_edges,1..2] of var int: arcs = array2d(1..n_edges, 1..2,[
   |i in 1..n_edges,j in 1..2]);
 
 %array of flow balance for each node
-array[1..graph_size] of int: balances = [
+array[1..graph_size] of var int: balances = [
   if i == start then n_dests
   elseif exists(j in 1..n_dests)(dest[j] == i) then -1
   else 0 endif
   |i in 1..graph_size];
   
 %array of flows, domain variables for each arc
-array [1..n_edges] of var -n_dests..n_dests: flows;
+array[1..n_edges] of var int: -n_dests..n_dests: flows;
 
 constraint network_flow(arcs, balances, flows);
   
