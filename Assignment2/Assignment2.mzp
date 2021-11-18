@@ -1,12 +1,14 @@
 {
     "openFiles": [
         "Task1.mzn",
+        "Boorowed.mzn",
         "Data/data_1.dzn",
         "Data/data_2.dzn",
         "Data/data_3.dzn"
     ],
-    "openTab": 3,
+    "openTab": 0,
     "projectFiles": [
+        "Boorowed.mzn",
         "Data/data_1.dzn",
         "Data/data_2.dzn",
         "Data/data_3.dzn",

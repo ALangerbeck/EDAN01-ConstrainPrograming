@@ -1,4 +1,4 @@
-% Task 1
+% Task 1 NetworkFlow
 include "globals.mzn";
 
 int: graph_size;
@@ -13,12 +13,11 @@ array[0..n_edges] of var int:cost;
 %Decision Variables
 var int: travelCost;
 array[1..n_dests,1..graph_size] of var set of int: nextDest;
+array[1..n_dests,1..graph_size] of var 0..20: pathCost;
 
 
-%Constraint
-  forall(destinaion in 1..n_dest, city in 1..graphsize)(
-    nextDest[Destination,city] =
-      {to[x] | x in 1..n_edges where (from[x] == city)}
-      union
-      {from[x] | x in 1..n_edges where (to[x] == city}
-  );
+
+  
+  
+  
+ 
