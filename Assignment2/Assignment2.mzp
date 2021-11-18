@@ -12,9 +12,9 @@
         "Data/data_1.dzn",
         "Data/data_2.dzn",
         "Data/data_3.dzn",
-        "Task1NetworkFlow.mzn"
+        "Task1NetworkFlow.mzn",
+        "config.mpc"
     ],
-    "selectedBuiltinConfigId": "org.gecode.gecode",
-    "selectedBuiltinConfigVersion": "6.3.0",
+    "selectedSolverConfigFile": "config.mpc",
     "version": 106
 }
