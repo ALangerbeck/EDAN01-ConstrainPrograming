@@ -36,6 +36,7 @@ var int: totalCost = sum([cost[i] | i in 1..n_edges where flows[i] != 0]);
 solve minimize totalCost;
 
 output[
+"Path:",show([show(arcs[i,1])++" to "++show(arcs[i,2])++" flow:"++show(flows[i]) | i in 1..n_edges where flows[i] != 0]), "\n",
 "cost: ",show(totalCost),"\n"
 ]
  
