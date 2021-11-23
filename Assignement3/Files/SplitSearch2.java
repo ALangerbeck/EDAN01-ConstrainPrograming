@@ -254,7 +254,16 @@ public class SplitSearch2  {
 	 */ 
 	int selectValue(IntVar v) {
 	    //return v.min();
-		return (int) Math.ceil((v.min() + v.max())/2);
+		//return Math.floorDiv(v.min() + v.max(),2);
+		int mid;
+		int sum = v.max() + v.min();
+		if(sum%2 != 0){
+			mid = (sum +  1)/2 ;
+		}else{
+			mid = (sum/2);
+		}
+		return mid;
+		
 	}
 
 	/**
@@ -262,7 +271,7 @@ public class SplitSearch2  {
 	 */
 	public PrimitiveConstraint getConstraint() {
 	   // return new XeqC(var, value);
-	   return new XgteqC(var, value); //new constraint is now lover than value instea of equal
+	   return new XgteqC(var, value); //new constraint is now <= than value instea of =
 	}
     }
 }
