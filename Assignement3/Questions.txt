@@ -1,0 +1,3 @@
+-LevelDown decrese depth => we go up in the search tree
+-ChoicePoint, storage for domain, keeping track current domain and its smallest value
+-minimazation, when we select a value to label with, we choose the smallest value in the current domain. The start of each label we se if the new solution is "cheaper" than the last if it is not we discrad the solution.
