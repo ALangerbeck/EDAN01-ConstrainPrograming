@@ -46,6 +46,11 @@ import org.jacop.search.InputOrderSelect;
 import org.jacop.search.PrintOutListener;
 import org.jacop.search.Search;
 import org.jacop.search.SelectChoicePoint;
+import org.jacop.search.SplitSelect;
+import org.jacop.search.SimpleSelect;
+import org.jacop.search.SmallestDomain;
+import org.jacop.search.SmallestMin;
+import org.jacop.search.IndomainRandom;
 
 /**
  * 
@@ -170,15 +175,26 @@ public class Golomb {
 	IntVar cost = numbers[numbers.length - 1];
 
 	//SplitSearch1 search = new SplitSearch1(store);
-	SplitSearch2 search = new SplitSearch2(store);
+	//SplitSearch2 search = new SplitSearch2(store);
 	//SimpleDFS search = new SimpleDFS(store);
-	search.setVariablesToReport(numbers);
-	search.setCostVariable(cost);
 
-	boolean result = search.label(numbers);
+	//search.setVariablesToReport(numbers);
+	//search.setCostVariable(cost);
+	//boolean result = search.label(numbers);
 
-	System.out.println("Total number of visited nodes = " + search.N);
-	System.out.println("Total number of failed nodes = " + search.failedNodes);
+	Search<IntVar> search = new DepthFirstSearch<IntVar>();
+	//Search<IntVar> search = new <IntVar>();
+	SelectChoicePoint<IntVar> select = new SimpleSelect<IntVar>(numbers,new SmallestDomain<IntVar>(),new IndomainMin<IntVar>());
+	boolean result = search.labeling(store,select);
+
+
+
+	
+
+
+	//System.out.println("Total number of visited nodes = " + search);
+	//System.out.println("Total number of failed nodes = " + search.failedNodes);
+	System.out.println("nmb backtracks = " + search.getBacktracks() + " nmb nodes = " + search.getNodes());
 	
 	System.out.println (result);
 

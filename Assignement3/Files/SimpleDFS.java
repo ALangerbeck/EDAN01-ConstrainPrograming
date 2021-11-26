@@ -132,7 +132,7 @@ public class SimpleDFS  {
 
 		reportSolution();
 
-		return costVariable == null; // true is satisfiability search and false if minimization
+		return (costVariable == null); // true is satisfiability search and false if minimization
 	    }
 
  	    choice = new ChoicePoint(vars);
