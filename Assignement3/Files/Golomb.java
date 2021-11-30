@@ -184,7 +184,9 @@ public class Golomb {
 
 	Search<IntVar> search = new DepthFirstSearch<IntVar>();
 	//Search<IntVar> search = new <IntVar>();
-	SelectChoicePoint<IntVar> select = new SimpleSelect<IntVar>(numbers,new SmallestDomain<IntVar>(),new IndomainMin<IntVar>());
+	//SelectChoicePoint<IntVar> select = new SimpleSelect<IntVar>(numbers,new SmallestDomain<IntVar>(),new IndomainMin<IntVar>());
+	SelectChoicePoint<IntVar> select = new SimpleSelect<IntVar>(numbers,null,new IndomainMin<IntVar>());
+
 	boolean result = search.labeling(store,select);
 
 
