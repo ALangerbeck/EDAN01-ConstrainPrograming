@@ -1,0 +1,31 @@
+SimpleDFS:
+Nodes visited: 16057
+Cost is n9 = 55
+n0 = 0 n1 = 1 n2 = 6 n3 = 10 n4 = 23 n5 = 26 n6 = 34 n7 = 41 n8 = 53 n9 = 55     
+---------------
+Total number of visited nodes = 32059
+Total number of failed nodes = 16029
+false
+
+Splitsearch1:
+Nodes visited: 22463
+Cost is n9 = 55
+n0 = 0 n1 = 1 n2 = 6 n3 = 10 n4 = 23 n5 = 26 n6 = 34 n7 = 41 n8 = 53 n9 = 55     
+---------------
+Total number of visited nodes = 41847
+Total number of failed nodes = 20923
+false
+
+Splitsearch2:
+Nodes visited: 698132
+Cost is n9 = 55
+n0 = 0 n1 = 1 n2 = 6 n3 = 10 n4 = 23 n5 = 26 n6 = 34 n7 = 41 n8 = 53 n9 = 55     
+---------------
+Total number of visited nodes = 701141
+Total number of failed nodes = 350570
+false
+
+Jacop DFS:
+DFS1: DFS([n0 = 0, n9 = 55, n1 = 1, n2 = 6, n3 = 10, n4 = 23, n5 = 26, n6 = 34, n8 = 53, n7 = 41], SimpleSelect(org.jacop.search.SmallestDomain@26653222, null, org.jacop.search.IndomainMin@3532ec19))
+nmb backtracks = 26641 nmb nodes = 53331
+true
