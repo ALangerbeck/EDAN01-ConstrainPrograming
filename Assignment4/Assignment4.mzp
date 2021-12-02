@@ -16,9 +16,9 @@
         "Data/ar_2_2.dzn",
         "Data/ar_2_3.dzn",
         "Data/ar_2_4.dzn",
+        "config.mpc",
         "task1.mzn"
     ],
-    "selectedBuiltinConfigId": "org.gecode.gecode",
-    "selectedBuiltinConfigVersion": "6.3.0",
+    "selectedSolverConfigFile": "config.mpc",
     "version": 106
 }
