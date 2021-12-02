@@ -19,6 +19,7 @@
         "config.mpc",
         "task1.mzn"
     ],
-    "selectedSolverConfigFile": "config.mpc",
+    "selectedBuiltinConfigId": "jacop.org",
+    "selectedBuiltinConfigVersion": "4.8",
     "version": 106
 }
