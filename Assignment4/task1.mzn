@@ -56,8 +56,3 @@ constraint diffn([start_time[i]| i in mul],  [mul_height[i]| i in mul] ,[del_mul
 
 constraint forall(o in last)(start_time[o] + duration[o] <= end);
 
-solve minimize end;
-
-output [ "time = ",show(end)];
-
-
