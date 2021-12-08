@@ -1,0 +1,26 @@
+{
+    "openFiles": [
+        "UrbanPlaning.mzn",
+        "Data/urban_1.dzn",
+        "Data/urban_2.dzn",
+        "Data/urban_3.dzn",
+        "Data/urban_4.dzn",
+        "Data/urban_5.dzn",
+        "Data/urban_6.dzn",
+        "Data/urban_7.dzn"
+    ],
+    "openTab": 0,
+    "projectFiles": [
+        "Data/urban_1.dzn",
+        "Data/urban_2.dzn",
+        "Data/urban_3.dzn",
+        "Data/urban_4.dzn",
+        "Data/urban_5.dzn",
+        "Data/urban_6.dzn",
+        "Data/urban_7.dzn",
+        "UrbanPlaning.mzn",
+        "config.mpc"
+    ],
+    "selectedSolverConfigFile": "config.mpc",
+    "version": 106
+}
