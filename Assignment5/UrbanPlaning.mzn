@@ -7,10 +7,8 @@ int: n_commercial;
 int: n_residential;
 array[1..n+1] of int: point_distribution;
 
-%var 0..2*n*max(point_distribution): total_points;
-
 %== decision variabled ==
-var int: total_points;
+var 2*n*min(point_distribution)..2*n*max(point_distribution): total_points;
 
 array[1..n,1..n] of var 0..1: placement;
 array[1..n] of var 0..n : row_sums;
@@ -22,7 +20,7 @@ array[1..n] of var min(point_distribution)*2..max(point_distribution)*2 : column
 
 %constain number of residential/comercial
 constraint sum(i in 1..n, j in 1..n)(placement[i,j]) = n_residential; 
-%constraint n*n - sum(i in 1..n, j in 1..n)(placement[i,j]) = n_comercial;
+constraint n*n - sum(i in 1..n, j in 1..n)(placement[i,j]) = n_commercial;
 
 %make row and column sum of residetial
 constraint forall(i in 1..n)(row_sums[i] = sum(j in 1..n)(placement[j,i]));
@@ -35,17 +33,15 @@ constraint forall(i in 1..n)(column_points[i] = point_distribution[column_sums[i
 %finilize points
 constraint total_points = sum(i in 1..n)(row_points[i]+column_points[i]);
 
+%destroy symetry
 constraint lex2(placement);
 
 solve maximize total_points;
 
-
-
 output["max points: ",show(total_points),"\n",
-        "placement in ", show(n),"*",show(n)," grid : ",show(placement),"\n",
-        "== 0 means comercial, 1 means residential == \n",
-        "row sum of residential: ",show(row_sums),"\n",
-        "column sum of residential: ",show(column_sums),"\n"]
+        %"row sum of residential: ",show(row_sums),"\n",
+        %"column sum of residential: ",show(column_sums),"\n",
+        "placement in ", show(n),"*",show(n)," grid (0 means comercial, 1 means residential) : \n",show2d(placement),"\n"]
 
 
 
