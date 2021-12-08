@@ -1,4 +1,4 @@
 {
-    "intermediate-solutions": true,
+    "intermediate-solutions": false,
     "solver": "jacop.org@4.8"
 }

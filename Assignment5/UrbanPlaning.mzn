@@ -1,4 +1,4 @@
-%Urban planing
+%Urban planing using JaCoP 4.8 
 include "globals.mzn";
 
 %== input data ==
@@ -38,10 +38,11 @@ constraint lex2(placement);
 
 solve maximize total_points;
 
-output["max points: ",show(total_points),"\n",
+output[
         %"row sum of residential: ",show(row_sums),"\n",
         %"column sum of residential: ",show(column_sums),"\n",
-        "placement in ", show(n),"*",show(n)," grid (0 means comercial, 1 means residential) : \n",show2d(placement),"\n"]
+        "placement in ", show(n),"*",show(n)," grid (0 means comercial, 1 means residential) : \n",show2d(placement),"\n",
+        "max points: ",show(total_points),"\n"]
 
 
 
