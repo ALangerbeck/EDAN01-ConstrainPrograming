@@ -1,14 +1,14 @@
 {
     "openFiles": [
-        "task1.mzn",
         "Data/ar_1_2.dzn",
         "Data/ar_1_3.dzn",
         "Data/ar_2_2.dzn",
         "Data/ar_2_3.dzn",
         "Data/ar_2_4.dzn",
-        "Data/ar_1_1.dzn"
+        "Data/ar_1_1.dzn",
+        "task1.mzn"
     ],
-    "openTab": 0,
+    "openTab": -1,
     "projectFiles": [
         "Data/ar_1_1.dzn",
         "Data/ar_1_2.dzn",
@@ -17,8 +17,10 @@
         "Data/ar_2_3.dzn",
         "Data/ar_2_4.dzn",
         "config.mpc",
-        "task1.mzn"
+        "task1.mzn",
+        "task1Old.mzn"
     ],
-    "selectedSolverConfigFile": "config.mpc",
+    "selectedBuiltinConfigId": "jacop.org",
+    "selectedBuiltinConfigVersion": "4.8",
     "version": 106
 }

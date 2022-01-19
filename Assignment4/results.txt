@@ -1,0 +1,44 @@
+Configuration
+1 adder, 1 multiplier 	
+adder:[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] 
+mul:[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] 
+Clockcycles = 34 
+Searchtime 855ms	
+optimal: yes
+
+1 adder, 2 multiplier 
+adder:[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] 
+mul:[1, 2, 1, 2, 1, 2, 1, 2, 1, 1, 2, 2, 1, 2, 1, 2] 
+Clockcycles = 18 
+Searchtime 855ms
+optimal: yes
+
+
+1 adder, 3 multiplier
+adder:[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] 
+mul:[1, 1, 1, 2, 3, 1, 2, 3, 2, 2, 3, 3, 1, 2, 1, 3]
+Clockcycles = 16
+Searchtime  2s 360ms
+optimal: yes
+
+
+2 adder, 2 multiplier
+adder:[1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2]
+mul:[1, 1, 1, 2, 1, 2, 2, 2, 1, 1, 2, 2, 1, 2, 1, 2]
+Clockcycles = 18
+Searchtime  945ms
+optimal: yes
+
+2 adder, 3 multiplier 
+adder:[1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1]
+mul:[1, 1, 1, 2, 3, 1, 2, 3, 2, 2, 3, 3, 1, 2, 3, 1]
+Clockcycles = 15
+Searchtime  909ms
+optimal: yes
+
+2 adder, 4 multiplier
+adder:[1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2]
+mul:[1, 2, 1, 2, 3, 4, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4]
+Clockcycles = 11
+Searchtime  838ms
+optimal: yes
